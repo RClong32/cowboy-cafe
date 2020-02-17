@@ -12,7 +12,15 @@ namespace CowboyCafe.Data
         /// <summary>
         ///   gets weathers theres lemon or not
         /// </summary>
-        public bool Lemon = false;
+        private bool lemon = true;
+        /// <summary>
+        /// If the water has lemon
+        /// </summary>
+        public bool Lemon
+        {
+            get { return lemon; }
+            set { lemon = value; }
+        }
 
 
         public override double Price

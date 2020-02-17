@@ -11,16 +11,32 @@ namespace CowboyCafe.Data
     {
 
         /// <summary>
-        /// weather to add cream or not
+        ///   gets weathers theres lemon or not
         /// </summary>
-        public bool Lemon = false;
+        private bool lemon = false;
+        /// <summary>
+        /// If the water has lemon
+        /// </summary>
+        public bool Lemon
+        {
+            get { return lemon; }
+            set { lemon = value; }
+        }
 
 
 
         /// <summary>
-        /// weather to add cream or not
+        ///   gets weathers theres cream or not
         /// </summary>
-        public bool Sweet = true;
+        private bool roomforcream = true;
+        /// <summary>
+        /// If the coffee has cream
+        /// </summary>
+        public bool RoomForCream
+        {
+            get { return roomforcream; }
+            set { roomforcream = value; }
+        }
 
 
 

@@ -10,14 +10,30 @@ namespace CowboyCafe.Data
     public class CowboyCoffee: Drink
     {
         /// <summary>
-        /// weather to add cream or not
+        ///   gets weathers theres cream or not
         /// </summary>
-        public bool RoomForCream = false;
+        private bool roomforcream = false;
+        /// <summary>
+        /// If the coffee has cream
+        /// </summary>
+        public bool RoomForCream
+        {
+            get { return roomforcream; }
+            set { roomforcream = value; }
+        }
 
         /// <summary>
-        /// ice set to false
+        ///   gets weathers theres ice or not
         /// </summary>
-        public override bool Ice = false;
+        private bool ice = false;
+        /// <summary>
+        /// If the coffee has cream
+        /// </summary>
+        public bool Ice
+        {
+            get { return ice; }
+            set { ice = value; }
+        }
 
 
         /// <summary>
