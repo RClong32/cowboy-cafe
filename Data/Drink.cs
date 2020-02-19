@@ -18,7 +18,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// gets weather theres ice or not
         /// </summary>
-        public abstract bool Ice { get; set; } = true;
+        public virtual bool Ice { get; set; } = true;
 
         /// <summary>
         /// gets the price

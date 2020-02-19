@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
         /// <summary>
         ///   gets weathers theres lemon or not
         /// </summary>
-        private bool lemon = true;
+        private bool lemon = false;
         /// <summary>
         /// If the water has lemon
         /// </summary>
@@ -57,6 +57,7 @@ namespace CowboyCafe.Data
                             return 0;
                         case Size.Small:
                             return 0;
+                    default:
                             throw new NotImplementedException("Unknown Size");
                     }
                 

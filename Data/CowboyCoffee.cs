@@ -23,13 +23,26 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
+        ///   gets weathers theres decaf or not
+        /// </summary>
+        private bool decaf = false;
+        /// <summary>
+        /// If the coffee has cream
+        /// </summary>
+        public bool Decaf
+        {
+            get { return decaf; }
+            set { decaf = value; }
+        }
+
+        /// <summary>
         ///   gets weathers theres ice or not
         /// </summary>
         private bool ice = false;
         /// <summary>
         /// If the coffee has cream
         /// </summary>
-        public bool Ice
+        public override bool Ice
         {
             get { return ice; }
             set { ice = value; }
@@ -73,6 +86,7 @@ namespace CowboyCafe.Data
                         return 5;
                     case Size.Small:
                         return 3;
+                    default:
                         throw new NotImplementedException("Unknown Size");
                 }
             }

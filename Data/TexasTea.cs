@@ -28,14 +28,14 @@ namespace CowboyCafe.Data
         /// <summary>
         ///   gets weathers theres cream or not
         /// </summary>
-        private bool roomforcream = true;
+        private bool sweet = true;
         /// <summary>
         /// If the coffee has cream
         /// </summary>
-        public bool RoomForCream
+        public bool Sweet
         {
-            get { return roomforcream; }
-            set { roomforcream = value; }
+            get { return sweet; }
+            set { sweet = value; }
         }
 
 
@@ -79,6 +79,7 @@ namespace CowboyCafe.Data
                             return 22;
                         case Size.Small:
                             return 10;
+                        default:
                             throw new NotImplementedException("Unknown Size");
                     }
                 }
@@ -92,6 +93,7 @@ namespace CowboyCafe.Data
                             return 11;
                         case Size.Small:
                             return 5;
+                        default:
                             throw new NotImplementedException("Unknown Size");
                     }
                 }
