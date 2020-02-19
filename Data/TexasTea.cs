@@ -115,7 +115,22 @@ namespace CowboyCafe.Data
             }
         }
 
-
+        /// <summary>
+        /// returns the string representation of the Drink
+        /// </summary>
+        /// <returns>returns Texas Tea string</returns>
+        public override string ToString()
+        {
+            string b = Size.ToString();
+            if(Sweet == true)
+            {
+                return b + " Texas Sweet Tea";
+            }
+            else
+            {
+                return b + " Texas Plain Tea";
+            }
+        }
 
 
 

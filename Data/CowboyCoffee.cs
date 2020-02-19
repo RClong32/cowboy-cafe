@@ -107,6 +107,25 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// returns the string representation of the Drink
+        /// </summary>
+        /// <returns>returns Cowboy Coffee string</returns>
+        public override string ToString()
+        {
+            
+            string b = Size.ToString();
+            if(Decaf == true)
+            {
+                return b + " Decaf Cowboy Coffee";
+            }
+            else
+            {
+                return b + " Cowboy Coffee";
+            }
+            
+        }
+
 
     }
 }
