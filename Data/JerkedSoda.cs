@@ -16,7 +16,6 @@ namespace CowboyCafe.Data
         public SodaFlavor Flavor { get; set; }
 
 
-
         /// <summary>
         ///method for getting the price based on size
         /// </summary>

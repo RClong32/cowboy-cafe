@@ -40,7 +40,7 @@ namespace CowboyCafe.Data
         /// </summary>
         private bool ice = false;
         /// <summary>
-        /// If the coffee has cream
+        /// If the coffee has Ice
         /// </summary>
         public override bool Ice
         {
