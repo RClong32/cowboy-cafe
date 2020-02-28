@@ -63,7 +63,7 @@ namespace CowboyCafe.Data
 
 
 
-
+        public override List<string> SpecialInstructions { get; }
 
 
 

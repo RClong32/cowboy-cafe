@@ -58,5 +58,10 @@ namespace CowboyCafe.Data
             return b + " Baked Beans";
         }
 
+
+        public override List<string> SpecialInstructions { get; }
+
+
+
     }
 }

@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// a base class representing a entree
     /// </summary>
-    public abstract class Entree
+    public abstract class Entree: IOrderItem
     {
         /// <summary>
         /// gets the price of the entree

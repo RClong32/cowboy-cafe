@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// inherited abstract drink class
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IOrderItem
     {
 
         /// <summary>
