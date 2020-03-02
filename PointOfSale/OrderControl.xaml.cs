@@ -22,6 +22,7 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
+            
         }
         /// <summary>
         /// button for ordering Angry Chicken
@@ -30,7 +31,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new AngryChicken());
+            if(DataContext is Order OrderList)
+            {
+                OrderList.Add(new AngryChicken());
+            }
+            
         }
 
         /// <summary>
@@ -40,7 +45,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddRustlersRibsButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new RustlersRibs());
+            //OrderList.Items.Add(new RustlersRibs());
         }
         /// <summary>
         /// button for ordering Pecos Pulled Pork
@@ -49,7 +54,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPecosPulledPorkButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new PecosPulledPork());
+           // OrderList.Items.Add(new PecosPulledPork());
         }
         /// <summary>
         /// button for ordering a Trail Burger
@@ -58,7 +63,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTrailBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TrailBurger());
+           // OrderList.Items.Add(new TrailBurger());
         }
         /// <summary>
         /// button for ordering a Dakota Double Burger
@@ -67,7 +72,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddDakotaDoubleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new DakotaDoubleBurger());
+            //OrderList.Items.Add(new DakotaDoubleBurger());
         }
         /// <summary>
         /// button for ordering a Texas Triple Burger
@@ -76,7 +81,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTripleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TexasTripleBurger());
+            //OrderList.Items.Add(new TexasTripleBurger());
         }
         /// <summary>
         /// button for ordering Cowpoke Chili
@@ -85,7 +90,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CowpokeChili());
+            //OrderList.Items.Add(new CowpokeChili());
         }
         /// <summary>
         /// button for ordering Chili Cheese Fries
@@ -94,7 +99,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddChiliCheeseFriesButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new ChiliCheeseFries());
+            //OrderList.Items.Add(new ChiliCheeseFries());
         }
         /// <summary>
         /// button for ordering Corn Dodgers
@@ -103,7 +108,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCornDodgersButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CornDodgers());
+            //OrderList.Items.Add(new CornDodgers());
         }
         /// <summary>
         /// button for ordering Pan de Campo
@@ -112,7 +117,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPanDeCampoButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new PanDeCampo());
+            //OrderList.Items.Add(new PanDeCampo());
         }
         /// <summary>
         /// button for ordering Baked Beans
@@ -121,7 +126,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddBakedBeansButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new BakedBeans());
+            //OrderList.Items.Add(new BakedBeans());
         }
         /// <summary>
         /// button for ordering Jerked Soda
@@ -130,7 +135,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddJerkedSodaButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new JerkedSoda());
+            //OrderList.Items.Add(new JerkedSoda());
         }
         /// <summary>
         /// button for ordering Texas Tea
@@ -139,7 +144,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTeaButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TexasTea());
+            //OrderList.Items.Add(new TexasTea());
         }
         /// <summary>
         /// button for ordering Cowboy Coffee
@@ -148,7 +153,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowboyCoffeeButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CowboyCoffee());
+            //OrderList.Items.Add(new CowboyCoffee());
         }
         /// <summary>
         /// button for ordering water
@@ -157,7 +162,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddWaterButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new Water());
+            //OrderList.Items.Add(new Water());
         }
     }
 }

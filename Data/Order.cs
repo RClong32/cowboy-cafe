@@ -26,16 +26,22 @@ namespace CowboyCafe.Data
         {
             get
             {
-                return items;
+                return items.ToArray();
             }
         }
 
         /// <summary>
         /// double of subtotal before taxes of total order cost
         /// </summary>
-        public double Subtotal = 0;
+        private double subtotal = 0;
 
-
+        public double Subtotal { 
+            
+            get
+            {
+                return subtotal;
+            } 
+        }
         /// <summary>
         /// list of IOrderItem items
         /// </summary>
@@ -62,9 +68,9 @@ namespace CowboyCafe.Data
         public void Add(IOrderItem item)
         {
             items.Add(item);
-            Subtotal += item.Price;
+            subtotal += item.Price;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Prices"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
 
@@ -75,9 +81,9 @@ namespace CowboyCafe.Data
         public void Remove(IOrderItem item)
         {
             items.Remove(item);
-            Subtotal -= item.Price;
+            subtotal -= item.Price;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Prices"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
 

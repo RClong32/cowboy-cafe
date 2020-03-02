@@ -104,7 +104,7 @@ namespace CowboyCafe.DataTests
         /// </summary>
         /// <param name="propertyName"></param>
         [Theory]
-        [InlineData("Price")]
+        [InlineData("Prices")]
         [InlineData("Items")]
         public void AddingAnItemShouldTriggerPropertyChangedForPrice(string propertyName)
         {
@@ -120,7 +120,7 @@ namespace CowboyCafe.DataTests
         /// </summary>
         /// <param name="propertyName"></param>
         [Theory]
-        [InlineData("Price")]
+        [InlineData("Prices")]
         [InlineData("Items")]
         public void RemovingAnItemShouldTriggerPropertyChangedForItems(string propertyName)
         {
