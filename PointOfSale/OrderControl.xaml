@@ -18,35 +18,19 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Item Selection" Grid.Column="0" Grid.Row="0" Height="50"/>
+        <Button Content="Cancel Order" Click="CancelOrder_Click" Grid.Column="1" Grid.Row="0" Height="50"/>
+        <Button Content="Complete Order" Click="CompleteOrder_Click" Grid.Column="2" Grid.Row="0" Height="50"/>
 
-        <StackPanel>
-            <TextBlock TextAlignment="Center"><Run Text="Entree"/></TextBlock>
-            <Button Content="AngryChicken" Click="AddAngryChickenButton_Click"/>
-            <Button Content="Cowpoke Chilli" Click="AddCowpokeChiliButton_Click"/>
-            <Button Content="Rustlers Ribs" Click="AddRustlersRibsButton_Click"/>
-            <Button Content="Pecos Pulled Pork" Click="AddPecosPulledPorkButton_Click"/>
-            <Button Content="Trail Burger" Click="AddTrailBurgerButton_Click"/>
-            <Button Content="Dakota Double Burger" Click="AddDakotaDoubleBurgerButton_Click"/>
-            <Button Content="Texas Triple Burger" Click="AddTexasTripleBurgerButton_Click"/>
-        </StackPanel>
+        <local:MenuItemSelectionControl Grid.ColumnSpan="3" Grid.Row="1"/>    
 
-        <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center">Side</TextBlock>
-            <Button Content = "Chilli Cheese Fries" Click="AddChiliCheeseFriesButton_Click"/>
-            <Button Content = "Corn Dodgers" Click="AddCornDodgersButton_Click"/>
-            <Button Content = "Pan De Campo" Click="AddPanDeCampoButton_Click"/>
-            <Button Content = "Baked Beans" Click="AddBakedBeansButton_Click"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="2">
-            <TextBlock TextAlignment="Center">Drinks</TextBlock>
-            <Button Content = "Jerked Soda" Click="AddJerkedSodaButton_Click"/>
-            <Button Content = "Texas Tea" Click="AddTexasTeaButton_Click"/>
-            <Button Content = "Cowboy Coffee" Click="AddCowboyCoffeeButton_Click"/>
-            <Button Content = "Water" Click="AddWaterButton_Click"/>
-        </StackPanel>
+        
 
 
-        <local:OrderSummaryControl Grid.Column="3"/>
+        <local:OrderSummaryControl Grid.Column="3" Grid.Row="0" Grid.RowSpan="2"/>
     </Grid>
 </UserControl>
