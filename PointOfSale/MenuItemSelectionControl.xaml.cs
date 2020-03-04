@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+
 namespace PointOfSale
 {
     /// <summary>
@@ -109,9 +110,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
                 OrderList.Add(new CowpokeChili());
+                var screen = new CowpokeChiliCustomization();
+                screen>DataContext = item;
+                orderControl?.SwapScreen(new CowpokeChiliCustomization(item));
             }
         }
         /// <summary>
