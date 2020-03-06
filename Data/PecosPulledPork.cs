@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// a class representing the Pecos Pulled Pork entree
     /// </summary>
-    public class PecosPulledPork: Entree
+    public class PecosPulledPork: Entree,INotifyPropertyChanged
     {
 
 
@@ -18,7 +18,7 @@ namespace CowboyCafe.Data
         public bool Bread
         {
             get { return bread; }
-            set { bread = value; }
+            set { bread = value; PropertyNotify("Bread"); }
         }
 
 
@@ -30,7 +30,7 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set { pickle = value; PropertyNotify("Pickle"); }
         }
 
 

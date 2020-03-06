@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A base class representing a side
     /// </summary>
-    public abstract class Side: IOrderItem
+    public abstract class Side: IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Gets the size of the entree
@@ -26,5 +26,16 @@ namespace CowboyCafe.Data
 
 
         public abstract List<string> SpecialInstructions { get; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void PropertyNotify(string s)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(s));
+        }
     }
+
+    
 }

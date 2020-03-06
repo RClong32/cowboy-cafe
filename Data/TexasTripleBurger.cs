@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// class representing the Texas Triple Burger entree
     /// </summary>
-    public class TexasTripleBurger: Entree
+    public class TexasTripleBurger: Entree, INotifyPropertyChanged
     {
 
         private bool bun = true;
@@ -17,7 +17,7 @@ namespace CowboyCafe.Data
         public bool Bun
         {
             get { return bun; }
-            set { bun = value; }
+            set { bun = value; PropertyNotify("Bun"); }
         }
 
 
@@ -28,7 +28,7 @@ namespace CowboyCafe.Data
         public bool Ketchup
         {
             get { return ketchup; }
-            set { ketchup = value; }
+            set { ketchup = value; PropertyNotify("Ketchup"); }
         }
 
 
@@ -39,7 +39,7 @@ namespace CowboyCafe.Data
         public bool Mustard
         {
             get { return mustard; }
-            set { mustard = value; }
+            set { mustard = value; PropertyNotify("Mustard"); }
         }
 
 
@@ -50,7 +50,7 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set { pickle = value; PropertyNotify("Pickle"); }
         }
 
 
@@ -61,7 +61,7 @@ namespace CowboyCafe.Data
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set { cheese = value; PropertyNotify("Cheese"); }
         }
 
 
@@ -73,7 +73,7 @@ namespace CowboyCafe.Data
         public bool Tomato
         {
             get { return tomato; }
-            set { tomato = value; }
+            set { tomato = value; PropertyNotify("Tomato"); }
         }
 
 
@@ -84,7 +84,7 @@ namespace CowboyCafe.Data
         public bool Lettuce
         {
             get { return lettuce; }
-            set { lettuce = value; }
+            set { lettuce = value; PropertyNotify("Lettuce"); }
         }
 
 
@@ -95,7 +95,7 @@ namespace CowboyCafe.Data
         public bool Mayo
         {
             get { return mayo; }
-            set { mayo = value; }
+            set { mayo = value; PropertyNotify("Mayo"); }
         }
 
 
@@ -106,7 +106,7 @@ namespace CowboyCafe.Data
         public bool Bacon
         {
             get { return bacon; }
-            set { bacon = value; }
+            set { bacon = value; PropertyNotify("Bacon"); }
         }
 
 
@@ -117,7 +117,7 @@ namespace CowboyCafe.Data
         public bool Egg
         {
             get { return egg; }
-            set { egg = value; }
+            set { egg = value; PropertyNotify("Egg"); }
         }
 
         /// <summary>

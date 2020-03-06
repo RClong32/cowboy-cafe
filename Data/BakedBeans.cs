@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace CowboyCafe.Data
 {
-    public class BakedBeans: Side
+    public class BakedBeans: Side, INotifyPropertyChanged
     {
+        private Size size;
 
+        public override Size Size
+        {
+            get { return size; }
+            set { Size = value; PropertyNotify("Size"); }
+        }
         /// <summary>
         ///method for getting the price based on size
         /// </summary>

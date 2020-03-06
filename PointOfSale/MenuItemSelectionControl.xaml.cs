@@ -11,6 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using PointOfSale.ItemCustimization;
+
 
 namespace PointOfSale
 {
@@ -35,9 +37,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
-                OrderList.Add(new AngryChicken());
+                var item = new AngryChicken();
+                OrderList.Add(item);
+                var screen = new ItemCustomization.AngryChickenCustomization();
+                screen.DataContext = item;
+                orderControl?.SwapScreen(screen);
             }
 
         }
@@ -62,9 +69,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPecosPulledPorkButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
-                OrderList.Add(new PecosPulledPork());
+                var item = new PecosPulledPork();
+                OrderList.Add(item);
+                var screen = new ItemCustomization.PecosPulledPorkCustomization();
+                screen.DataContext = item;
+                orderControl?.SwapScreen(screen);
             }
         }
         /// <summary>
@@ -74,9 +86,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTrailBurgerButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
-                OrderList.Add(new TrailBurger());
+                var item = new TrailBurger();
+                OrderList.Add(item);
+                var screen = new ItemCustomization.TrailBurgerCustomization();
+                screen.DataContext = item;
+                orderControl?.SwapScreen(screen);
             }
         }
         /// <summary>
@@ -86,9 +103,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddDakotaDoubleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
-                OrderList.Add(new DakotaDoubleBurger());
+                var item = new DakotaDoubleBurger();
+                OrderList.Add(item);
+                var screen = new ItemCustomization.DakotaDoubleBurgerCustomization();
+                screen.DataContext = item;
+                orderControl?.SwapScreen(screen);
             }
         }
         /// <summary>
@@ -98,9 +120,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTripleBurgerButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
-                OrderList.Add(new TexasTripleBurger());
+                var item = new TexasTripleBurger();
+                OrderList.Add(item);
+                var screen = new ItemCustomization.TexasTripleBurgerCustomization();
+                screen.DataContext = item;
+                orderControl?.SwapScreen(screen);
             }
         }
         /// <summary>
@@ -113,10 +140,11 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
-                OrderList.Add(new CowpokeChili());
+                var item = new CowpokeChili();
+                OrderList.Add(item);
                 var screen = new CowpokeChiliCustomization();
-                screen>DataContext = item;
-                orderControl?.SwapScreen(new CowpokeChiliCustomization(item));
+                screen.DataContext = item;
+                orderControl?.SwapScreen(screen);
             }
         }
         /// <summary>
@@ -162,9 +190,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddBakedBeansButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order OrderList)
             {
-                OrderList.Add(new BakedBeans());
+                var item = new BakedBeans();
+                OrderList.Add(item);
+                var screen = new ItemCustomization.BakedBeansCustomization();
+                screen.DataContext = item;
+                orderControl?.SwapScreen(screen);
             }
         }
         /// <summary>

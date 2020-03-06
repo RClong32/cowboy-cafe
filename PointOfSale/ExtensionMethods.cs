@@ -8,15 +8,15 @@ namespace PointOfSale
     public static class ExtensionMethods
     {
 
-        public static FrameworkElement FindAncestor<T>(this DependencyObject element) where T : DependencyObject
+        public static T FindAncestor<T>(this DependencyObject element) where T : DependencyObject
         {
-            var parent = VisualTreeHelper
+            var parent = VisualTreeHelper.GetParent(element);
 
             if (parent == null) return null;
 
             if (parent is T) return parent as T;
 
-            return parent.FindAncestor<T>;
+            return parent.FindAncestor<T>();
         }
 
 

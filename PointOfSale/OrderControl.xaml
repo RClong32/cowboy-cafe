@@ -26,9 +26,9 @@
         <Button Content="Cancel Order" Click="CancelOrder_Click" Grid.Column="1" Grid.Row="0" Height="50"/>
         <Button Content="Complete Order" Click="CompleteOrder_Click" Grid.Column="2" Grid.Row="0" Height="50"/>
 
-        <local:MenuItemSelectionControl Grid.ColumnSpan="3" Grid.Row="1"/>
-        <Border x:Name="Container" Grid.Row="1">
-            
+        
+        <Border x:Name="Container" Grid.ColumnSpan="3" Grid.Row="1">
+            <local:MenuItemSelectionControl />
         </Border>
         
 
